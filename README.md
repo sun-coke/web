@@ -5,8 +5,8 @@
 #### 1. 安装rosbridge-suite，web_video_server
 
 ```
-sudo apt-get install ros-kinetic-rosbridge-suite
-sudo apt-get install ros-kinetic-web-video-server
+$ sudo apt-get install ros-kinetic-rosbridge-suite
+$ sudo apt-get install ros-kinetic-web-video-server
 ```
 
 ### B、配置
@@ -22,8 +22,10 @@ $ vim /etc/hosts # 在里面添加 IP[tab]Hostname
 ### C、运行
 
 #### 1.由于视频传输地址默认端口号为8080，这里监控原始图像信息/camera/rgb/image_raw
-roslaunch turtlebot3_gazebo turtlebot3_world.launch 
-roslaunch rosbridge_server rosbridge_websocket.launch
-rosrun web_video_server web_video_server
+```
+$ roslaunch turtlebot3_gazebo turtlebot3_world.launch 
+$ roslaunch rosbridge_server rosbridge_websocket.launch
+$ rosrun web_video_server web_video_server
+```
 #### 2.网页端输入如下网址：
 http://localhost:8080/stream?topic=/camera/rgb/image_raw
